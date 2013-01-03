@@ -41,6 +41,7 @@ OPTIONS = ['members',
           ]
 
 INIT = '__init__.py'
+MAIN = '__main__.py'
 
 def makename(package, module):
     """Join package and module with a dot."""
@@ -179,6 +180,9 @@ def recurse_tree(path, excludes, opts):
         if INIT in py_files:
             py_files.remove(INIT)
             py_files.insert(0, INIT)
+        # don't include __main__ modules.
+        if MAIN in py_files:
+            py_files.remove(MAIN)
         # remove hidden ('.') and private ('_') directories
         subs = sorted([sub for sub in subs if sub[0] not in ['.', '_']])
         # check if there are valid files to process
