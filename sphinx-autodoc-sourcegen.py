@@ -36,7 +36,7 @@ import optparse
 # automodule options
 OPTIONS = ['members',
            'undoc-members',
-	   #'inherited-members',
+           #'inherited-members',
            'show-inheritance'
           ]
 
@@ -175,7 +175,7 @@ def recurse_tree(path, excludes, opts):
     tree = os.walk(path, False)
     for root, subs, files in tree:
         # keep only the Python script files
-        py_files =  sorted([f for f in files if os.path.splitext(f)[1] == '.py'])
+        py_files = sorted([f for f in files if os.path.splitext(f)[1] == '.py'])
         if INIT in py_files:
             py_files.remove(INIT)
             py_files.insert(0, INIT)
