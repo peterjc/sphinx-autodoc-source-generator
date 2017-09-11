@@ -1,14 +1,28 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1.0'
+version = '0.1.1'
 
 setup(name='sphinx-autodoc-source-generator',
       version=version,
       description="This script will traverse a tree of Python modules and create sphinx RST",
-      long_description="""\
-source (using the autodoc extension) that reflects the tree.""",
-      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      long_description="""Script to traverse a tree of Python modules and create
+API documentation as reStructuredText (RST) markup using the module docstrings
+via sphinx and the autodoc extension.""",
+      # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      classifiers=[
+          'Intended Audience :: Developers',
+          'Framework :: Sphinx',
+          'License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 2',
+          'Programming Language :: Python :: 3',
+          'Topic :: Documentation',
+          'Topic :: Documentation :: Sphinx',
+          'Topic :: Software Development :: Libraries :: Python Modules',
+          'Topic :: Software Development :: Documentation',
+      ],
       keywords='sphinx autodoc',
       author='Robin Keller',
       author_email='rkeller@cars.com',
